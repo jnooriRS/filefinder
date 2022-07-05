@@ -1,3 +1,5 @@
+#!bin/bash
+
 #--version=prints out version of the application
 #--help= prints out application help
 #scan-folder=Dir=folder to scan for file
@@ -13,3 +15,10 @@ filefinder(){
 echo would you like to see your folder? 
 #conditional if yes print ls if no exit application
 }
+
+#ls -lx by extention
+#-d directory exists
+#find . -inname "*.md" | sort -r find all markdownfiles in working directory
+#find . inname "*$go_to_directory" | sort -r --output (save list to file)
+#find "$go_to_directory" -type d
+#find -name "XXX" -and -type d
