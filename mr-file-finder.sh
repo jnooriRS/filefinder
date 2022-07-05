@@ -15,3 +15,5 @@ filefinder(){
 echo would you like to see your folder? 
 #conditional if yes print ls if no exit application
 }
+
+ls -lx
