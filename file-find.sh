@@ -18,12 +18,12 @@ then
 #function to loop through all files and copy into folder
     ls -lx
 
-    for file in $COMMAND_DIRECTORY
+    for file in $COMMAND_DIRECTORY/*
     do
         if [[ "$file" == *.md ]]
         then
-            mkdir /markdown
-            cp "$file" /markdown
+            mkdir -p markdown
+            mv $file markdown/
         fi
     done;
 

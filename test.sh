@@ -10,8 +10,8 @@ then
     for i in *.txt
     do
         echo "$i"
-        mkdir /txt
-            cp $i /txt
+        mkdir -p txt
+            mv $i txt
             ls
     done
 else 
@@ -21,4 +21,4 @@ fi
 #Notes
 #Comparrison sqaure brackets does not work with find command/ nor dierct extention
 #This will create a new file for everyfile so defo incorrect
-#Need permission
+#Need permission why does -p work to overcome user permission
