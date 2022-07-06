@@ -12,6 +12,14 @@ then
     echo "The $COMMAND_DIRECTORY exists"
     cd $COMMAND_DIRECTORY
     ls
+    echo "This is the number of files you have"
+# list all files and count
+    ls -1 | wc -l
+#function to loop through all files and copy into folder
+    ls -lx
+    find . -name "*.md"
+#echo what file you want to search for
+#function loop through folder and find file
 else 
     echo "The $COMMAND_DIRECTORY does not exist"
 fi
