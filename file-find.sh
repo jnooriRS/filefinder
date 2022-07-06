@@ -3,12 +3,20 @@ echo File Finder
 echo what directory would you like to find?
 
 read User
-echo $User
+#echo $User
+COMMAND_DIRECTORY="/c/Users/HansPeterJonasHogh-J/dev/repos/${User}"
+echo $COMMAND_DIRECTORY
 #go_to_directory=User input appneded to file path
-if [ -d $go_to_directory ]
+if [ -d $COMMAND_DIRECTORY ]
 then 
-    echo "The $go_to_directory exists"
-    cd $got_to_directory
+    echo "The $COMMAND_DIRECTORY exists"
+    cd $COMMAND_DIRECTORY
     ls
 else 
-    echo "The $got_to_directory does not exist"
+    echo "The $COMMAND_DIRECTORY does not exist"
+fi
+
+#escape code ""
+#caps
+#Keypasscd
+#function or noun
