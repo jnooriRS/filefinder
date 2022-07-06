@@ -18,12 +18,14 @@ then
 #function to loop through all files and copy into folder
     ls -lx
 
-for file in  "$COMMAND_DIRECOTRY"; do
-    if [[ $file == *.md ]]
-    then
-    mkdir /markdown
-    cp $file /markdown
-done
+    for file in $COMMAND_DIRECTORY
+    do
+        if [[ "$file" == *.md ]]
+        then
+            mkdir /markdown
+            cp "$file" /markdown
+        fi
+    done;
 
 #echo what file you want to search for
 #function loop through folder and find file
