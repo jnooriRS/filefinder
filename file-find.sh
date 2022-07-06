@@ -17,7 +17,14 @@ then
     ls -1 | wc -l
 #function to loop through all files and copy into folder
     ls -lx
-    find . -name "*.md"
+
+for file in  "$COMMAND_DIRECOTRY"; do
+    if [[ $file == *.md ]]
+    then
+    mkdir /markdown
+    cp $file /markdown
+done
+
 #echo what file you want to search for
 #function loop through folder and find file
 else 
@@ -28,3 +35,4 @@ fi
 #caps
 #Keypasscd
 #function or noun
+ #find . -name "*.md" -exec mkdir {} markdown \;
