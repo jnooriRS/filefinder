@@ -29,7 +29,7 @@ ECHO $USER_FOLDER
         if [[ "$file" == *$FILE_EXT ]]
         then
             mkdir -p ${USER_FOLDER}
-            mv $file ${USER_FOLDER}/
+            mv $file ${USER_FOLDER}
         fi
     done;
 
@@ -45,4 +45,3 @@ fi
 #function or noun
  #find . -name "*.md" -exec mkdir {} markdown \;
  #getops for flags command executable
- 
