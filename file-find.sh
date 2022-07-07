@@ -1,6 +1,7 @@
 #!/bin/bash
 echo File Finder
 echo what directory would you like to find?
+sleep 10
 read -r User
 echo $User
 COMMAND_DIRECTORY="/c/Users/HansPeterJonasHogh-J/dev/repos/${User}"
