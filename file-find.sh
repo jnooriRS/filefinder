@@ -44,3 +44,5 @@ fi
 #Keypasscd
 #function or noun
  #find . -name "*.md" -exec mkdir {} markdown \;
+ #getops for flags command executable
+ 
