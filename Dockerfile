@@ -2,6 +2,7 @@ FROM ubuntu
 RUN chmod 700 .
 WORKDIR /app
 COPY . .
+VOLUME [ "/c/Users/HansPeterJonasHogh-J/dev/repos/"]
 #when conatiner starts what is the executable
 ENTRYPOINT ["/bin/bash", "file-find.sh"]
 #Dockerise command 
