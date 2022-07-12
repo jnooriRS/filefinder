@@ -1,7 +1,7 @@
 #!/bin/bash
-while getopts "ryg" option; do
+while getopts "vh" option; do
 case ${option} in
-r )
+v )
 echo "My favorite color is red"
 ;;
 y )
