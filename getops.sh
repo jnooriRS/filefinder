@@ -3,26 +3,30 @@ APPLICATION_VERSION="1.0"
 APPLICATION_HELP="SOME HELP TEXT"
 
 function help(){
-echo "h${APPLICATION_HELP}"
-exit 0
-
+        echo "h${APPLICATION_HELP}"
+        exit 0
 }
+help
 
-function version(){
+function versionapp(){
     echo "v${APPLICATION_VERSION}"
     exit 0
 }
+versionapp
 
 function check(){
-    while getops "vh" opt; do
-    case ${opt} in
+    while getopts "vh" option; do
+    case $option in
     v) 
-     version
+     versionapp
     ;;
     h) 
      help
     ;;
+    \? )
+    echo "You have entered an invalid option. The valid options are [r], [y], and [g]"
+    ;;
     esac
-    fi
-done
+    done
 }
+check
