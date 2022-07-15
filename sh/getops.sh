@@ -6,21 +6,38 @@ function help(){
         echo "h${APPLICATION_HELP}"
         exit 0
 }
-help
+
 
 function versionapp(){
     echo "v${APPLICATION_VERSION}"
     exit 0
 }
-versionapp
 
+ while getopts "hv::o:" arg; do
+  case $arg in
+    h)
+      echo "HELP"
+      ;;
+    v)
+      echo "VERSION"
+      ;;
+    o)
+      OUTPUT=$OPTARG
+      echo "output:${OUTPUT}"
+      ;;
+  esac
+done
 function check(){
+   
+    echo "Hello fucntion"
     while getopts "vh" option; do
     case $option in
     v) 
+    echo "Hello Version"
      versionapp
     ;;
     h) 
+    echo "Hello help"
      help
     ;;
     \? )
